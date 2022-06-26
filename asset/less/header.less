@@ -1,0 +1,126 @@
+.container.border-bottom {
+    border-bottom: 1px solid @brown-color;
+}
+
+.icon-search:before, .icon-user:before, .icon-shopping-bag:before {
+    font-size: 2rem;
+    color: @black-blue-color;
+    font-weight: 500;
+}
+
+.header {
+    .set-flex-center();
+    justify-content: space-between;
+    padding-top: 3.3rem;
+    padding-bottom: 3.2rem;
+
+    .icon-hidden {
+        display: none;
+
+        .icon-menu {
+            font-size: 2.4rem;
+            font-weight: 600;
+            color: @black-blue-color;
+        }
+    }
+
+    &-left {
+        // width: 85%;
+        .set-flex-center();
+        gap: 0 11rem;
+
+        & .header-logo {
+            width: 40%;
+            max-width: 28rem;
+            & img {
+                width: 100%;
+            }
+        }
+
+        & .menu {
+            width: 60%;
+        }
+    }
+
+    &-right {
+        width: 15%;
+        display: flex;
+        justify-content: end;
+
+        & .menu {
+            gap: 0 2rem;
+            &-list {
+                gap: 0 2rem;
+
+                &__link {
+                   
+                }
+            }
+
+          
+
+            .auth-language {
+                .set-flex-center();
+                p {
+                    .set-font(@Manrope, 1.5rem, 500, @black-blue-color);
+                }
+
+                a .icon-chevron-down::before {
+                    font-size: 1.2rem;
+                    color: @black-blue-color;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1440px){
+    .header {
+        justify-content: center;
+
+        &-right {
+             display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 540px){
+    .header {
+        justify-content: center;
+        gap: 1.5rem;
+
+        &-right {
+             display: block;
+             justify-content: end;
+
+             & .menu {
+                .auth-language {
+                    display: none;
+                }
+
+                &-list {
+                    gap: 0 1.6rem;
+                }
+             }
+        }
+
+        &-left {
+            gap: 0 2.9rem;
+
+            .menu {
+                display: none;
+            }
+
+            & .header-logo {
+                width: 80%;
+                max-width: 20.3rem;
+            }
+
+            .icon-hidden {
+                .set-flex-center();
+                gap: 0 2rem;
+            }
+        }
+    }
+}
