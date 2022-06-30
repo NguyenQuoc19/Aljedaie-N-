@@ -1,0 +1,67 @@
+.main {
+    &-title {
+        width: 100%;
+        text-align: center;
+        h1 {
+            .set-font(@EB-Garamond, 5rem, 500, @brown-color);
+            margin: 0;
+            padding: 4rem
+        }
+        
+        p {
+            .set-font(@Montserrat, 1.6rem, 400, @black-blue-color);
+            text-transform: uppercase;
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    &-row {
+        .banner {
+            position: relative;
+            width: 100%;
+
+            img {
+                width: 100%;
+            }
+
+            &-link {
+                position: absolute;
+                bottom: 10%;
+                left: 50%;
+                transform: translate(-50%, 0);
+
+                a {
+                    .set-flex-center;
+                    gap: 0 2rem;
+
+                    p {
+                        .set-font(@Montserrat, 1.4rem, 400, @brown-color);
+                        letter-spacing: 0.2rem;
+                        text-transform: uppercase;
+                    }
+
+                    .icon-play::before {
+                        font-size: 1.8rem;
+                        color: @brown-color;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+
+        .menu.logos{
+            padding: 6% 0;
+            .owl-carousel .owl-stage {
+                .set-flex-center;
+    
+                .menu-list {
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        } 
+    }
+}
+
