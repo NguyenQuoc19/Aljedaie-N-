@@ -11,11 +11,10 @@ $(document).ready(function() {
         
         let collaps = document.getElementsByClassName('footer-collaps-btn');
         $('.footer-collaps-btn').on('click', function() {
-            if($('.footer-collaps-btn').hasClass('active')) {
+            if($(this).hasClass('active')) {
                 $(this).removeClass('active');
             } else {
                 $(this).addClass('active');
-                $(this).children('menu').css("max-height", "20px");
             }
         })
      }
