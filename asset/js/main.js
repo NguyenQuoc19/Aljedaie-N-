@@ -8,6 +8,8 @@ $(document).ready(function() {
         $('.header-left').after($('.header-logo'));
         $('.footer-col').addClass('footer-collaps-btn');
         $('.footer-col:last').removeClass('footer-collaps-btn');
+        $('.guide .main-title').after($('.guide .container img'));
+        $('.about .main-title').after($('.about .container img'));
         
         let collaps = document.getElementsByClassName('footer-collaps-btn');
         $('.footer-collaps-btn').on('click', function() {
@@ -18,6 +20,10 @@ $(document).ready(function() {
                 $(this).children('menu').css("max-height", "20px");
             }
         })
+     }
+
+     if(width <= 540) {
+        $('.banner img').attr('src', './asset/image/banner/banner-mb.png');
      }
 
      $(window).on('resize', function() {location.reload()});

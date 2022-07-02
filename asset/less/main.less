@@ -5,7 +5,8 @@
         h1 {
             .set-font(@EB-Garamond, 5rem, 500, @brown-color);
             margin: 0;
-            padding: 4rem
+            // padding: 4rem 0;
+            line-height: 150%
         }
         
         p {
@@ -13,6 +14,61 @@
             text-transform: uppercase;
             margin: 0;
             padding: 0;
+            width: 100%;
+            letter-spacing: 0.1rem;
+            line-height: 150%;
+        }
+    }
+
+    &-title__small {
+        width: 100%;
+
+        h1 {
+            .set-font(@EB-Garamond, 3.2rem, 500, #fff);
+            margin: 0;
+            padding: 2rem 0;
+            line-height: 120%;
+        }
+    }
+
+    &-link {
+        position: relative;
+        a {
+            .set-flex-center;
+            gap: 0 1rem;
+        }
+        p {
+            .set-font(@Montserrat, 1.4rem, 400, @brown-color);
+            letter-spacing: 0.2rem;
+            text-transform: uppercase;
+            margin: 0;
+            padding: 0;
+        }
+
+        &::after {
+            content: '\e914';
+            position: absolute;
+            font-family: 'icomoon';
+            font-size: 2rem;
+            color: @brown-color;
+            font-weight: 500;
+            top: 50%;
+            right: 35%;
+            transform: translate(0, -50%);
+        }
+    }
+
+    &-list {
+        .set-flex-center;
+
+        .main-item {
+            position: relative;
+
+            .main-content {
+                position: absolute;
+                padding: 3.5%;
+                bottom: 0;
+            }
         }
     }
 
@@ -51,7 +107,7 @@
         }
 
         .menu.logos{
-            padding: 6% 0;
+            padding: 3% 0;
             .owl-carousel .owl-stage {
                 .set-flex-center;
     
@@ -62,6 +118,222 @@
                 }
             }
         } 
+
+        .best-sellers {
+            max-width: 130.5rem;
+            background-image: url('../image/banner/best-sellers.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin: 0 auto;
+            margin-top: 4%;
+            margin-bottom: 6%;
+            padding-left: 7%;
+            padding-top: 5.2%;
+            width: 93%;
+
+            .list-product {
+                width: 80%;
+                max-width: 93rem;
+                gap: 0 3%;
+
+                .owl-item .product {
+                    max-width: 29rem;
+                    width: 100%;
+                    background-color: #fff;
+
+                    img {
+                        width: 95%;
+                    }
+                }
+            }
+        }
+
+        .our-fabrics {
+            width: 100%;
+           margin-top: 4%;
+           margin-bottom: 6%;
+
+           .main-item {
+                width: 100%;
+                max-width: 36rem;
+                .main-content {
+                    width: 90%;
+                    max-width: 36rem;
+                    padding: 10%;
+                }
+                img {
+                    width: 100%;
+                    object-fit: contain;
+                }
+           }
+        }
+
+        .feature-new {
+            width: 100%;
+            margin-top: 4%;
+            margin-bottom: 6%;
+
+            .list-product {
+                width: 100%;
+
+                .owl-item .product {
+                    max-width: 31.31.5rem;
+                    width: 100%;
+                    background-color: #fff;
+
+                    img {
+                        width: 95%;
+                    }
+                }
+            }
+        }
+
+        .share {
+            width: 100%;
+            margin-top: 1%;
+            margin-bottom: 1%;
+
+            .main-list {
+                .main-item {
+                    position: relative;
+                    width: 100%;
+                    max-width: 40rem;
+                    max-height: 40rem;
+
+                    &::before {
+                        content: '@aljedaietextiles';
+                        position: absolute;
+                        width: 35%;
+                        // height: 10%;
+                        padding: 2rem 0;
+                        max-width: 15rem;
+                        max-height: 4rem;
+                        bottom: 0;
+                        right: 0;
+                        .set-font(@Montserrat, 1.4rem, 400, #fff);
+                        background-color: rgba(5, 6, 22, 0.6);
+                        text-align: center;
+                    }
+
+                    img {
+                        width: 100%;
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+
+        &.guide, &.about {
+            margin-bottom: 4%;
+            .container {
+                display: flex;
+
+                img {
+                    width: 55%;
+                    max-width: 80rem;
+                    object-fit: contain;
+                }
+                .main-col {
+                    width: 50%;
+                    .main-content {
+                        width: 100%;
+                        display: flex;
+                        flex-wrap: wrap;
+                        p {
+                            .set-font(@Montserrat, 1.6rem, 400, @black-blue-color);
+                            width: 80%;
+                            max-width: 43rem;
+                            line-height: 150%;
+                            text-align: justify;
+                        }
+                    }
+
+                    .main-link {
+                        width: 80%;
+                        max-width: 43rem;
+                        p {
+                            .set-font(@Montserrat, 1.4rem, 400, @brown-color);
+                            max-width: 50%;
+                        }
+
+                        &::after {
+                            right: 50%;
+                        }
+                    }
+                }
+            }
+
+            .main-title {
+                text-align: start;
+                margin-bottom: 5%;
+            }
+        }
+
+        &.guide {
+            .main-content {
+                justify-content: end;
+            }
+        }
+      
+        &.about {
+            .main-content {
+                justify-content: start;
+            }
+        }
+
+        .container.benefits {
+            .set-flex-center;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            .main-col {
+                width: 33%;
+                .set-flex-center;
+                justify-content: center;
+                gap: 0 3rem;
+                padding: 5% 0;
+
+                .icon-globe, .icon-credit-card, .icon-calendar {
+                    position: relative;
+                    width: 30%;
+                    max-width: 6rem;
+                    height: 6rem;
+                    border-radius: 100rem;
+                    background: rgba(173, 137, 108, 0.05);
+                    box-shadow: inset 2px 4px 9px rgba(173, 137, 108, 0.2);
+                }
+
+                .icon-globe::before, .icon-credit-card::before, .icon-calendar::before {
+                    position: absolute;
+                    font-size: 2.4rem;
+                    color: @brown-color;
+                    font-weight: 500;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+
+                .main-title {
+                    width: 65%;
+                    text-align: start;
+                    h1 {
+                        .set-font(@EB-Garamond, 2.2rem, 500, @brown-color);
+                        margin: 0;
+                        line-height: 150%
+                    }
+                    
+                    p {
+                        .set-font(@Montserrat, 1.4rem, 400, @black-blue-color);
+                        margin: 0;
+                        padding: 0;
+                        width: 100%;
+                        letter-spacing: 0.1rem;
+                        line-height: 150%;
+                        text-transform: inherit;
+                    }
+                }
+            }
+        }
     }
 }
 

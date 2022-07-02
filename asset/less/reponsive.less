@@ -4,6 +4,13 @@
    }
 }
 
+@media only screen and (max-width: 1200px){
+    html {
+        font-size: 48.5%;
+   }
+}
+
+
 @media only screen and (max-width: 1000px){
     html {
             font-size: 42.5%;
@@ -107,7 +114,142 @@
                 }
             }
         }
+    }
 
+    .main {
+        &-title {
+            
+            h1 {
+                font-size: 3.6rem;
+            }
+            
+            p {
+                font-size: 1.2rem;
+            }
+        }
+
+        &-title__small {
+            h1 {
+                font-size: 2.2rem;
+                white-space: nowrap; 
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            p {
+                white-space: nowrap; 
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+
+        &-link {
+            p {
+                font-size: 1.2rem;
+            }
+    
+            &::after {
+                font-size: 2rem;
+                right: 15%;
+            }
+        }
+
+        &-row {
+            &.guide, &.about {
+                .container {
+                    img {
+                        width: 100%;
+                    }
+                    .main-col {
+                        width: 100%;
+                        .main-content {
+                            width: 100%;
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: start;
+                            p {
+                                width: 100%;
+                                max-width: 100%;
+                                margin: 2% 0;
+                            }
+                        }
+    
+                        .main-link {
+                            width: 100%;
+                            p {
+                                .set-font(@Montserrat, 1.4rem, 400, @brown-color);
+                                max-width: 50%;
+                            }
+    
+                            &::after {
+                                right: 60%;
+                            }
+                        }
+                    }
+                }
+    
+                .main-title {
+                    text-align: center;
+                    margin-bottom: 5%;
+                }
+            }
+
+            .container.benefits {
+                .main-col {
+                    width: 100%;
+                    padding: 2% 0;
+                    .icon-globe, .icon-credit-card, .icon-calendar {
+                        display: none;
+                    }
+
+                    .main-title {
+                        width: 60%;
+                        text-align: center;
+                        h1 {
+                            font-size: 2rem
+                        }
+                    }
+
+                    &:last-child {
+                        margin-bottom: 4%;
+                    }
+                }
+            }
+
+            .best-sellers {
+                padding-left: 0;
+
+                .list-product {
+                    width: 95%;
+                    max-width: 100%;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        .product {
+            &-infor {
+                &__title {
+                    h3 {
+                        font-size: 1.6rem;
+                    }
+                }
+        
+                &__content {
+                    p {
+                        font-size: 1.2rem
+                    }
+        
+                    span {
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+        
+            .icon-heart {
+                font-size: 2rem;
+            }
+        }
     }
 }
 
@@ -124,6 +266,12 @@
         }
     }
 
+    .main {
+        &-row.share{
+            display: none;
+        }
+    }
+
     .footer {
         .footer-row:last-child{
             .menu {
@@ -137,7 +285,6 @@
                         max-width: 4.4rem;
                     }
                 }
-    
             }
 
             .footer-content {
@@ -151,7 +298,7 @@
 
 @media only screen and (max-width: 414px){
     html {
-        font-size: 42.5%;
+        font-size: 52.5%;
     }
 
     .header {
@@ -172,6 +319,22 @@
 
        &-left {
            width: 20%;
+        }
+    }
+
+    .main {
+        &-row {
+            &.guide, &.about {
+                .container {
+                    .main-col {
+                        .main-link {
+                            &::after {
+                                right: 45%;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
