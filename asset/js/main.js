@@ -9,7 +9,7 @@ $(document).ready(function() {
         $('.footer-col').addClass('footer-collaps-btn');
         $('.footer-col:last').removeClass('footer-collaps-btn');
         $('.guide .main-title').after($('.guide .container img'));
-        $('.about .main-title').after($('.about .container img'));
+        $('.about .main-title').after($('.about  .container img'));
         
         let collaps = document.getElementsByClassName('footer-collaps-btn');
         $('.footer-collaps-btn').on('click', function() {
