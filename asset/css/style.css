@@ -928,6 +928,9 @@ a {
     text-align: center;
     margin-bottom: 1rem;
   }
+  .footer .footer-row .footer-col:last-child .footer-content p {
+    width: 100%;
+  }
 }
 @media only screen and (max-width: 414px) {
   html {
