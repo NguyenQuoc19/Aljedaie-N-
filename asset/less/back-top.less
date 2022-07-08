@@ -1,0 +1,31 @@
+.back-top {
+    position: fixed;
+    width: 5rem;
+    height: 5rem;
+    background-color: white;
+    box-shadow: 1px 1px 4px rgba(113, 113, 113, 0.668);
+    border-radius: 1rem;
+    bottom: 10%;
+    right: 4%;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    display: none;
+
+    &::before {
+        position: absolute;
+        content: '\ea25';
+        font-family: 'icomoon';
+        font-size: 2.2rem;
+        font-weight: 600;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: @black-blue-color;
+    }
+    
+    &:hover {
+        background-color: aqua;
+    }
+}
+

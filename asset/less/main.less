@@ -136,7 +136,7 @@
                 max-width: 93rem;
                 gap: 0 3%;
 
-                .owl-item .product {
+                .owl-item .myproduct {
                     max-width: 29rem;
                     width: 100%;
                     background-color: #fff;
@@ -176,7 +176,7 @@
             .list-product {
                 width: 100%;
 
-                .owl-item .product {
+                .owl-item .myproduct {
                     max-width: 31.31.5rem;
                     width: 100%;
                     background-color: #fff;
@@ -334,6 +334,39 @@
                 }
             }
         }
+    }
+
+    .owl-carousel .owl-nav button.owl-prev {
+        display: none;
+    }
+
+    .owl-carousel .owl-nav button.owl-next span {
+        display: none;
+    }
+    
+    .owl-carousel .owl-nav button.owl-next {
+        width: 100%;
+        height: 10rem;
+        text-align: end;
+    }
+
+    .owl-carousel .owl-nav button.owl-next::before {
+        content: '\e914';
+        font-family: 'icomoon';
+        font-size: 4rem;
+        font-weight: 500;
+        color: @brown-color;
+    }
+
+    .owl-carousel button.owl-dot {
+        width: 100%;
+        max-width: 20rem;
+        height: 2px;
+        background-color: bisque;
+    }
+
+    .owl-carousel button.owl-dot.active {
+        background-color: red;
     }
 }
 
